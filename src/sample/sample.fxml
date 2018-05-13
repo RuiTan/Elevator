@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: FFFFF0;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Pane prefHeight="167.0" prefWidth="600.0" style="-fx-background-color: FFFAF0;">
+         <children>
+            <Label layoutX="255.0" layoutY="120.0" text="你要去哪层：" />
+            <Label layoutX="49.0" layoutY="120.0" text="你在那一层：" />
+            <TextField fx:id="presentFloor" layoutX="127.0" layoutY="115.0" prefHeight="27.0" prefWidth="110.0" />
+            <TextField fx:id="aimFloor" layoutX="333.0" layoutY="115.0" prefHeight="27.0" prefWidth="110.0" />
+            <Button fx:id="addRequest" layoutX="468.0" layoutY="115.0" mnemonicParsing="false" onMouseClicked="#onClicked" text="我要上电梯" />
+            <Label layoutX="213.0" layoutY="17.0" text="电梯调度系统">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Button layoutX="161.0" layoutY="64.0" mnemonicParsing="false" onMouseClicked="#run" text="开始运行电梯" />
+            <Button layoutX="307.0" layoutY="63.0" mnemonicParsing="false" onMouseClicked="#stop" text="中断电梯运行" />
+         </children></Pane>
+      <Pane layoutY="166.0" prefHeight="354.0" prefWidth="600.0" style="-fx-background-color: FFE4C4;">
+         <children>
+            <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="380.0" prefWidth="580.0">
+               <children>
+                  <Pane prefHeight="340.0" prefWidth="110.0" style="-fx-background-color: FFDAB9; -fx-border-color: FFB6C1; -fx-border-image-width: 20;">
+                     <children>
+                        <Label fx:id="elevator1" layoutX="42.0" layoutY="14.0" text="1">
+                           <font>
+                              <Font name="Courier Bold" size="31.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="state1" alignment="CENTER" layoutX="30.0" layoutY="65.0" text="停止" textAlignment="CENTER">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <effect>
+                        <Blend />
+                     </effect>
+                  </Pane>
+                  <Pane layoutX="118.0" prefHeight="340.0" prefWidth="110.0" style="-fx-background-color: FFDAB9; -fx-border-color: FFB6C1; -fx-border-image-width: 20;">
+                     <children>
+                        <Label fx:id="elevator2" layoutX="42.0" layoutY="14.0" text="1">
+                           <font>
+                              <Font name="Courier Bold" size="31.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="state2" alignment="CENTER" layoutX="30.0" layoutY="65.0" text="停止" textAlignment="CENTER">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="235.0" prefHeight="340.0" prefWidth="110.0" style="-fx-background-color: FFDAB9; -fx-border-color: FFB6C1; -fx-border-image-width: 20;">
+                     <children>
+                        <Label fx:id="elevator3" layoutX="42.0" layoutY="14.0" text="1">
+                           <font>
+                              <Font name="Courier Bold" size="31.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="state3" alignment="CENTER" layoutX="30.0" layoutY="65.0" text="停止" textAlignment="CENTER">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="352.5" prefHeight="340.0" prefWidth="110.0" style="-fx-background-color: FFDAB9; -fx-border-color: FFB6C1; -fx-border-image-width: 20;">
+                     <children>
+                        <Label fx:id="elevator4" layoutX="42.0" layoutY="14.0" text="1">
+                           <font>
+                              <Font name="Courier Bold" size="31.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="state4" alignment="CENTER" layoutX="30.0" layoutY="65.0" text="停止" textAlignment="CENTER">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="470.0" prefHeight="340.0" prefWidth="110.0" style="-fx-background-color: FFDAB9; -fx-border-color: FFB6C1; -fx-border-image-width: 20;">
+                     <children>
+                        <Label fx:id="elevator5" layoutX="42.0" layoutY="14.0" text="1">
+                           <font>
+                              <Font name="Courier Bold" size="31.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="state5" alignment="CENTER" layoutX="30.0" layoutY="65.0" text="停止" textAlignment="CENTER">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </children></Pane>
+      <Pane layoutY="520.0" prefHeight="200.0" prefWidth="600.0" style="-fx-background-color: FFF5EE;">
+         <children>
+            <TextArea fx:id="log" layoutX="10.0" layoutY="10.0" prefHeight="180.0" prefWidth="580.0" promptText="电梯当前处于静止状态，" />
+         </children></Pane>
+   </children>
+</Pane>
